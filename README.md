@@ -1,7 +1,9 @@
 # Predicting RNAcompete Binding from an Amino-Acid Sequence — Design Document
 
 **Author:** Safwan Butto
+
 **Course:** Deep Learning in Computational Biology
+
 **Project:** Predicting RNAcompete binding based on an amino-acid sequence
 
 ## Abstract
