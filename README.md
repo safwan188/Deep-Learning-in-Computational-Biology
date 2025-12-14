@@ -11,6 +11,10 @@
 We present a two-tower neural model that predicts RNAcompete probe intensities for **unseen RNA-binding proteins (RBPs)** using only their amino-acid sequences. The **protein tower** uses frozen **ESM-2 15B** (hidden size 5120) embeddings projected to a compact representation; the **RNA tower** encodes nucleotides and fuses lightweight secondary-structure channels (**PHIME**). A gated low-rank cosine head produces a score per RNA probe.
 **Model selection** used an RBP-disjoint split on the **deduplicated training set (176 RBPs)** into **Train 132 / Val 44**, achieving **median Pearson $r = 0.4403$** on the **validation** RBPs. For the **final test submission**, we **retrained on all 176 RBPs** and obtained **mean Pearson $r = 0.29$** on the hidden **test set of 44 RBPs**, ranking **1st of 12 groups** (next best $r = 0.21$). The repository includes notebooks for RBP deduplication, secondary-structure features, and the full model and training pipeline.
 
+## Model Architecture
+
+![Two-Tower Model Architecture](model_architecture.png)
+
 ## 1. Problem & Data
 
 ### 1.1 Task
